@@ -1,0 +1,134 @@
+# class
+class Student:
+    def __init__(self, name, score):
+        self.name = name 
+        self.score = score
+        
+    def calculate_average_result(self):
+        total = sum(self.score.values())
+        number_of_subjects_written = len(self.score)
+        
+        return total / number_of_subjects_written
+
+
+# object
+daniel = Student("Daniel", {
+    "Mathematics": 85,
+    "English": 78,
+    "Biology": 92
+})
+
+sarah = Student("Sarah", {
+    "Mathematics": 95,
+    "English": 98,
+    "Biology": 92
+})
+
+# function call
+print(daniel.calculate_average_result())
+
+
+class Vehicle:
+        def __init__(self, name, model):
+            self.name = name
+            self.model = model
+            
+        def move (self):
+            print("I am moving")
+            
+tesla = Vehicle("Tesla", "Model S")
+    
+print(tesla.move())
+
+class Student:
+    def __init__(self, name, age, score):
+        self.name = name
+        self.age = age
+        self.score = score
+
+    def result(self, score, name,subject):
+       self.score
+
+    def calculate_average(self):
+         total = sum(self.score.values())
+         number_of_subjects = len(self.score)
+         return total / number_of_subjects
+
+daniel = Student("Daniel", 20, {
+    "Math": 85,
+    "Science": 90,
+    "English": 78
+})
+
+class Vehicle:
+    def __init__(self, name, model):
+        self.name = name
+        self.model = model
+    
+    def move (self):
+        print("I am moving.")
+
+tesla = Vehicle("Tesla", "Model S")
+tesla.move()
+print(tesla.move())
+
+class Player:
+    def __init__(self, name, age, scores):
+        self.name = name
+        self.age = age
+        self.scores = scores
+
+    def result(self, score, name, game):
+        self.scores[game] = score
+
+    def calculate_average(self):
+        total = sum(self.scores.values())
+        number_of_games = len(self.scores)
+        return total / number_of_games
+
+
+maya = Player("Maya", 19, {
+    "Chess": 85,
+    "Tennis": 90,
+    "Swimming": 78
+})
+
+print(maya.calculate_average())
+
+
+class Drone:
+    def __init__(self, name, model):
+        self.name = name
+        self.model = model
+
+    def move(self):
+        print("I am swimming,playing chess and playing tennis.")
+
+
+delivery_drone = Drone("Sky", "Aero X")
+delivery_drone.move()
+
+class Athlete:
+    def __init__(self, value =0):
+        self.thing = value
+    def how__big(self):
+        return (len(self.thing))
+
+thing = Athlete("I am swimming,playing chess and playing tennis.")
+
+class Payment:
+    def __init__(self,amount,type):
+        self.amount = amount
+        self.type = type
+
+    def send(self):
+       # print("Payment sent successfully."):
+       return f"Payment of {self.amount} sent successfully via {self.type}."
+
+class Ussdpayment(Payment):
+    def __init__(self, amount, type):
+        print("Payment sent successfully via USSD.")
+
+opay = Ussdpayment() 
+
+opay.send()

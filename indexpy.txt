@@ -1,0 +1,59 @@
+class Character:
+    def __init__(self, health, position):
+        self.health=health
+        self.position=position
+
+class Warrior(Character):
+    def __init__(self, shield, position):
+        super().__init__(health=100, position=position)
+
+        self.health = 250
+
+        self.shield = shield
+
+class Magician(Character):
+    def __init__(self, position, staff):
+        super().__init__(health=250, position=position)
+        self.health=150
+        self.staff=staff
+
+mercy = Magician(position="Rear", staff="Phoenix wand")
+print(f"A magicians position is in the {mercy.position},and she has {mercy.health} hp and she has {mercy.staff}")
+       
+        
+# mary = Character(health=100, position=("Town-square"))
+# print(f"Generic NPC Health: {mary.health}")      
+
+# zeus = Warrior(position=("Front"), shield="Iron Shield")
+# print(f"Warrior Health: {zeus.health}, {zeus.shield},  {zeus.position}")
+
+# magician 
+# hp = 100, mp = 10000, staff="Magic Staff"  
+
+# clergy 
+# hp = 100, mp = 5000, staff="Wooden Staff"
+
+# student_name = input("Enter name:")
+# file = open("attendance.txt", "w")
+# file.write(student_name)
+# file.close()
+# print("Attendance Recorded")
+
+# file = open("attendance.txt", "r")
+# attendance = file.read()
+# print(attendance)
+# file.close
+
+student_name = input("Please enter your name:")
+about_day = input("How was you day?")
+diary = open("diary.txt", "a")
+diary.write(f"student name: {student_name}: Diary Entry: {about_day}\n")
+diary.close()
+print("Your diary is now protected!")
+
+diary = open("diary.txt", "r")
+student_diary = diary.read()
+print(student_diary)
+diary.close()
+
+
